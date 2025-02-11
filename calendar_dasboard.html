@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회의실 예약 현황</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
+        h2 { color: #333; }
+        iframe { width: 100%; height: 600px; border: none; }
+    </style>
+    <script>
+        function reloadIframe() {
+            var iframe = document.getElementById('calendarFrame');
+            iframe.src = "https://calendar.google.com/calendar/embed?src=your_calendar_id@group.calendar.google.com&ctz=Asia%2FSeoul&t=" + new Date().getTime();
+        }
+        setInterval(reloadIframe, 60000); // 60초마다 새로고침
+    </script>
+</head>
+<body>
+    <h2>📅 회의실 예약 현황</h2>
+    <iframe id="calendarFrame" src="https://calendar.google.com/calendar/embed?src=onsetax23@group.calendar.google.com&ctz=Asia%2FSeoul"></iframe>
+</body>
+</html>
